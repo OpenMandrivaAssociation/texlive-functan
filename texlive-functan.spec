@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/functan
+# catalog-date 2007-01-07 11:47:19 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-functan
 Version:	20070107
 Release:	1
@@ -48,6 +54,7 @@ override the standard behavior of norms, ...).
 %doc %{_texmfdistdir}/source/latex/functan/functan.drv
 %doc %{_texmfdistdir}/source/latex/functan/functan.dtx
 %doc %{_texmfdistdir}/source/latex/functan/functan.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ override the standard behavior of norms, ...).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
