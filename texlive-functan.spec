@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-functan
 Version:	20070107
-Release:	4
+Release:	5
 Summary:	Macros for functional analysis and PDE theory
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/functan
