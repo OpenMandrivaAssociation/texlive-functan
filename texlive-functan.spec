@@ -1,9 +1,3 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/functan
-# catalog-date 2007-01-07 11:47:19 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-functan
 Version:	20170414
 Release:	1
@@ -37,13 +31,10 @@ override the standard behavior of norms, ...).
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/functan/functan.sty
-%doc %{_texmfdistdir}/doc/latex/functan/README
-%doc %{_texmfdistdir}/doc/latex/functan/functan.pdf
+%{_texmfdistdir}/tex/latex/functan
+%doc %{_texmfdistdir}/doc/latex/functan
 #- source
-%doc %{_texmfdistdir}/source/latex/functan/functan.drv
-%doc %{_texmfdistdir}/source/latex/functan/functan.dtx
-%doc %{_texmfdistdir}/source/latex/functan/functan.ins
+%doc %{_texmfdistdir}/source/latex/functan
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,17 +45,3 @@ override the standard behavior of norms, ...).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070107-2
-+ Revision: 752176
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070107-1
-+ Revision: 718514
-- texlive-functan
-- texlive-functan
-- texlive-functan
-- texlive-functan
-
