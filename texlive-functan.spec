@@ -1,13 +1,13 @@
 Name:		texlive-functan
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Macros for functional analysis and PDE theory
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/functan
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,12 +22,12 @@ with some object oriented flavor (it gives the possibility to
 override the standard behavior of norms, ...).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -38,7 +38,8 @@ override the standard behavior of norms, ...).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
