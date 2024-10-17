@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Macros for functional analysis and PDE theory
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/functan
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/functan
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/functan.doc.r%{version}.tar.xz
